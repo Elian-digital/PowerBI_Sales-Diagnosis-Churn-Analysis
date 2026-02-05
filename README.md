@@ -86,18 +86,18 @@ El diseño gráfico se aplicó para transformar la data en un diagnóstico claro
 
 ### Vista 1: Dashboard Principal (Vista Integral)
 
-![Dashboard Power BI](Dashboard_1.png)
+![Dashboard Power BI](assets/Dashboard_1.png?raw=true)
 
   * **Leyenda:** Demostración de la amplitud analítica, mostrando la visión general de ventas, estacionalidad y el impacto de las redes sociales, sirviendo como punto de partida para todas las exploraciones.
 
 ### Vista 2: El Descubrimiento Crítico
-![El descubrimiento](empresas_alemania.png)
+![El descubrimiento](assets/empresas_alemania.png?raw=true)
 
   * **Leyenda:** Gráfico que demuestra la caída en ventas de Alemania, validando el hallazgo crítico del proyecto.
 
 ### Vista 3: Clientes que desaparecen
 
-![El descubrimiento](clientes.png)
+![Clientes que desaparecen](assets/clientes.png?raw=true)
 
   * **Leyenda:** Ilustra el uso de bloques blancos para visibilizar al gran cantidad de clientes de paises como Italia, Poland o Uk que desaparecieron.
 
