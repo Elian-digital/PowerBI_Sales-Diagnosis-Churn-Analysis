@@ -1,129 +1,96 @@
+# 📊 Sales Diagnosis & Churn Analysis: El "Efecto Espejismo" en Europa
 
-## 🚀 **Sales Diagnosis & Churn Analysis: Identifying Revenue Leakage | Proyecto End-to-End con Power BI (ITAcademy)**
-
-Este proyecto es un **análisis de diagnóstico y estrategia *End-to-End*** que abordó la caída de ventas en un comercio online. El análisis aplicó habilidades avanzadas de **Modelado de Datos** y **Diseño de Información** para descubrir la causa raíz cuantificable: la pérdida masiva de clientes en el mercado alemán.
-
------
-
-## 🛠️ Stack Técnico y Metodología
-
-* **Herramientas:** Power BI Desktop, Power Query, DAX.
-* **Modelado:** Esquema en Estrella (Star Schema) con tablas de hechos y dimensiones estandarizadas.
-* **ETL:** Limpieza de datos avanzada en Power Query (Tipado de datos, manejo de nulos y normalización de moneda).
-* **Visualización:** Aplicación de principios de **Gestalt y Jerarquía Visual** para optimizar la carga cognitiva del usuario.
-
------
-
-### 💡 **El Desafío (La Crisis Comercial y el Punto Ciego)**
-
-La dirección observaba una baja generalizada en los ingresos sin conocer el origen. El sistema de *reporting* previo carecía de la capacidad de segmentación y modelado para aislar factores críticos como la fuga de clientes.
-
-  * **El Problema:** Determinar si la caída de ventas era un problema general de producto o un problema de retención en un mercado específico, para dirigir una acción estratégica inmediata.
-
------
-
-### 📖 **La Historia del Dato**
-
-> "Este proyecto empezó con una simple pregunta: *¿Por qué están cayendo las ventas?* Al principio, no se sabía de donde venía esta caída. Tras hacerle unas cuantas preguntas a la Base de datos (qué, dónde, quién, cuándo) empezaron a salir pistas. Al centrar el foco en la geografía y las interacciones del cliente, el dashboard comenzó a 'hablar'. El punto de inflexión fue la segmentación por continente, donde la luz de alerta se encendió sobre **Alemania**. El análisis de las series de tiempo y los recuentos de clientes reveló que el problema no era de rendimiento de producto, sino de una **fuga masiva en una empresa en concreto**. Transformamos una vaga preocupación sobre 'ventas bajas' en el diagnóstico preciso de un problema de retención, proporcionando un *insight* que requería una intervención estratégica inmediata."
-
------
-
-### 🎯 **La Solución (Implementación Técnica y Descubrimiento)**
-
-El proyecto se centró en la ingeniería de datos y el diseño para facilitar la exploración y el diagnóstico, sirviendo como una herramienta integral de *reporting* y análisis.
-
-  * **Herramientas Clave:** Power BI Desktop (Modelado, DAX, Visualización) y Power Query (ETL/Limpieza).
-
-#### 1\. Ingeniería y Modelado de Datos (Back-End)
-
-  * **Modelo de Estrella Optimizado:** Se construyó un **Modelo de Estrella** robusto unificando las tablas de hechos (transacciones) y las dimensiones (clientes, productos, tiempo), incluyendo la creación de **tablas intermedias** para garantizar la integridad y la velocidad de las consultas.
-  * **Limpieza de Datos Exhaustiva:** Implementación de **numerosos pasos de transformación** en Power Query (cambio de unidades, estandarización de formatos, manejo de inconsistencias) para garantizar la calidad y fiabilidad de los datos de origen.
-
-    ## 📊 Métricas Implementadas (DAX)
-
-Para este diagnóstico, desarrollé medidas personalizadas que permiten profundizar en el análisis:
-* **Churn Rate Estimado:** Identificación de clientes sin transacciones en el último periodo.
-* **Variación de Ingresos YoY:** Comparativa interanual para aislar el efecto de la estacionalidad.
-* **Ticket Promedio Dinámico:** Calculado para contrastar con el volumen de pedidos y detectar el "Efecto Espejismo".
-
-#### 2\. Análisis Exploratorio Multi-Dimensional
-
-El dashboard fue diseñado para una exploración exhaustiva antes del diagnóstico, permitiendo al usuario descartar hipótesis mediante:
-
-  * **Análisis de Portafolio:** Visualización de **qué vendemos** (productos, categorías) y su rendimiento.
-  * **Análisis Geográfico y Logístico:** Exploración de **dónde vendemos** y el flujo de ventas.
-  * **Análisis Temporal y de Estacionalidad:** Identificación de patrones de compra por **continente** y periodo.
-  * **Análisis de Canales:** Evaluación de la contribución de los canales digitales, incluyendo las **redes más usadas**.
-
-#### 3\. El Descubrimiento Crítico
-
-  * **Diagnóstico Preciso:** El análisis basado en el modelo reveló que la pérdida de clientes se concentraba en **Alemania**, y esta fuga de clientes representó el **4% del total de ventas** del comercio.
+> **"¡Las ventas han bajado!"** Tras un 2021 de récords históricos, el negocio empezó a contraerse. Este análisis fue diseñado para responder una pregunta crítica de negocio: **¿Por qué estamos perdiendo ingresos si nuestro ticket medio parece estable?**
 
 
-### 🔍 Análisis de Diagnóstico: El "Efecto Espejismo" del Ticket Promedio
-
-Un hallazgo crítico del proyecto fue la correlación inversa entre el Ticket Promedio y los Ingresos Totales a partir de 2022:
-
-* **El Espejismo del Promedio:** Aunque los precios unitarios se mantuvieron estables, el Ticket Promedio aumentó significativamente. Esto no indica una mayor rentabilidad, sino la **pérdida masiva de clientes de volumen menor**.
-* **Segmentación y Abandono:** Al desaparecer los clientes que realizaban compras pequeñas pero constantes, el promedio se desplazó hacia arriba debido a los pocos clientes "High-End" restantes. 
-* **Diagnóstico de Negocio:** El comercio perdió su base de clientes masiva (especialmente en Alemania), reduciendo la salud del ecosistema y la frecuencia de compra. Esto sugiere que la competencia capturó el mercado de entrada, dejando a la empresa en una posición vulnerable con baja diversificación de clientes.
+<img src="https://github.com/Elian-digital/PowerBI_Sales-Diagnosis-Churn-Analysis/blob/main/images/01_Evolucion_pedidos_ventas.png?raw=true" width="500">
 
 
------
+A través de este proyecto de Business Intelligence, identifiqué una **caída real del 4% en la facturación global**, ocultada por anomalías métricas, y aislé la verdadera causa raíz: un problema de **fuga masiva de clientes (Churn)** concentrado en un único mercado estratégico.
 
-### ✨ **Logros y Resultados (Valor y Perfil Profesional)**
+[📥 Descargar Presentación Ejecutiva en PDF (DataStory ventas.pdf)](./DataStory%20%20ventas.pdf)
 
-  * **Impacto Cuantificable y Diagnóstico:** El análisis proporcionó un diagnóstico inmediato sobre la causa del problema, **cuantificando su impacto en el 4% de las ventas totales**, permitiendo enfocar los recursos hacia la retención de clientes en un mercado específico.
-  * **Amplitud Analítica y Reporting Base:** El dashboard se consolidó como una **herramienta integral de *reporting*** que ofrece una visión completa de la estacionalidad, rendimiento de productos y eficacia de los canales digitales.
-  * **Gobernanza y Calidad del Dato:** Se garantiza la fiabilidad del informe mediante la aplicación de **procesos rigurosos de limpieza y estandarización** en Power Query, asegurando que el informe sea una **Fuente Única de Verdad (SSOT)**.
-  * **Visualización de Alto Impacto:** La presentación fue diseñada con una **alta atención al detalle gráfico (gracias al *background* de Diseñador Gráfico)**, empleando colores y jerarquías para guiar al usuario y **resaltar el segmento crítico**.
+---
 
------
+## 🔍 El Proceso de Diagnóstico: Descartando "Sospechosos"
 
-## 📊 **Visualizaciones del Dashboard (Diseño de Información en Acción)**
+Para resolver la caída de ingresos, el análisis avanzó descartando hipótesis mediante los datos, reduciendo la fricción cognitiva para la toma de decisiones corporativas:
 
-El diseño gráfico se aplicó para transformar la data en un diagnóstico claro y visualmente intuitivo, demostrando la capacidad de comunicación de *insights*.
+### ❌ Hipótesis 1: ¿Es un problema del catálogo o modas de producto?
+* **Diagnóstico:** Se analizó la evolución anual de ventas por producto (*Skywalker, Karstark, The Duel, Stannis, Direwolf*).
+* **Conclusión:** El catálogo basado en merchandising de franquicias se mantuvo completamente estable. No había pérdida de interés ni fatiga comercial de producto.
 
-### Vista 1: Dashboard Principal (Vista Integral)
 
-![Dashboard Power BI](assets/Dashboard_1.png?raw=true)
+<img src="https://github.com/Elian-digital/PowerBI_Sales-Diagnosis-Churn-Analysis/blob/main/images/02_Evolucion_ventas_producto.png?raw=true" width="500">
 
-  * **Leyenda:** Demostración de la amplitud analítica, mostrando la visión general de ventas, estacionalidad y el impacto de las redes sociales, sirviendo como punto de partida para todas las exploraciones.
 
-### Vista 2: El Descubrimiento Crítico
-![El descubrimiento](assets/empresas_alemania.png?raw=true)
+### ❌ Hipótesis 2: ¿Es un descenso generalizado en los mercados?
+* **Diagnóstico:** Segmentación geográfica del comportamiento de facturación del Top 5 de países (*Sweden, Netherlands, Italy, United Kingdom, Germany*).
+* **Conclusión:** Casi todos los mercados muestran una notable estabilidad a lo largo del tiempo... **excepto uno**.
 
-  * **Leyenda:** Gráfico que demuestra la caída en ventas de Alemania, validando el hallazgo crítico del proyecto.
 
-### Vista 3: Clientes que desaparecen
+<img src="https://github.com/Elian-digital/PowerBI_Sales-Diagnosis-Churn-Analysis/blob/main/images/03_Evolucion_ventas_pais.png?raw=true" width="500">
 
-![Clientes que desaparecen](assets/clientes.png?raw=true)
 
-  * **Leyenda:** Ilustra el uso de bloques blancos para visibilizar al gran cantidad de clientes de paises como Italia, Poland o Uk que desaparecieron.
+### 🚨 La Causa Raíz: ¿Qué ocurrió en Alemania?
+Alemania experimentó un crecimiento explosivo en 2020, pero en 2023 sufrió un desplome drástico en su facturación que terminó desestabilizando la foto global y empujando los KPI de la compañía a la baja. Ese patrón de caída libre no se repite en ningún otro país de la red.
 
------
 
-### ⏭️ **Próximos Pasos y Escalabilidad**
+<img src="https://github.com/Elian-digital/PowerBI_Sales-Diagnosis-Churn-Analysis/blob/main/images/04_Evolucion_ventas_Alemania.png?raw=true" width="500">
 
-Este proyecto sienta las bases para futuras iniciativas de inteligencia de negocio, mostrando la visión estratégica del análisis:
 
-  * **Monitoreo Activo:** Implementación de un sistema de alertas en Power BI Service para notificar inmediatamente sobre picos anormales en la tasa de abandono de clientes (Churn Rate).
-  * **Análisis Predictivo:** Ampliación del modelo con datos externos o algoritmos para predecir qué clientes tienen mayor probabilidad de fuga en el futuro.
-  * **Dashboard de Rentabilidad:** Desarrollo de un informe enfocado en el **Customer Lifetime Value (CLV)** para priorizar los esfuerzos de retención.
+## 💡 El "Efecto Espejismo" de AC Fermentum
 
------
+Al perforar en los datos de Alemania mediante técnicas de *Drill-Down*, descubrimos que el comportamiento macro del país estaba completamente monopolizado por un único cliente/distribuidor: **AC Fermentum**.
 
-## 🚀 Conclusiones y Visión Estratégica
+### 1. La distorsión del Ticket Medio
+En 2022, el ticket medio global de la compañía parecía subir con fuerza, dando a la junta directiva una falsa sensación de crecimiento y salud financiera. En realidad, era **AC Fermentum** la que distorsionaba la foto al inflar temporalmente la media global debido a un aumento puntual de su ticket medio. 
 
-1.  **Diagnóstico:** La caída de ventas no es un problema de producto, sino de **retención en la base de la pirámide**. El aumento del ticket promedio es un síntoma de la pérdida de clientes de bajo volumen.
-2.  **Impacto:** El mercado alemán es el "early warning" de esta tendencia. Si no se actúa, el 4% de pérdida actual podría escalar a otros mercados europeos.
-3.  **Próximos Pasos (Escalabilidad):** * Integrar un análisis de **Cohortes** para medir la retención por mes de adquisición.
-    * Implementar un **Dashboard de Alerta Temprana** que detecte caídas de volumen por país antes de que afecten al ingreso global.
 
------
+<img src="https://github.com/Elian-digital/PowerBI_Sales-Diagnosis-Churn-Analysis/blob/main/images/05_Ticket_medio_alemania_mundo.png?raw=true" width="500">
 
-### 🤝 **Contacto**
 
-  * **Desarrollador:** Elian Daghoum
-  * **Perfil de GitHub:** https://github.com/Elian-digital
-  * **LinkedIn/Contacto:** https://www.linkedin.com/in/eliandaghoum/
+La historia cobró un sentido analítico absoluto al aislar los ingresos de las empresas en Alemania: si el país se movía de forma tan volátil, era porque esta cuenta estaba arrastrando al mercado entero.
+
+
+<img src="https://github.com/Elian-digital/PowerBI_Sales-Diagnosis-Churn-Analysis/blob/main/images/06_Ingresos_empresas_alemania.png?raw=true" width="500">
+
+
+### 2. El Declive y el Churn Real
+Cuando el ticket promedio de AC Fermentum tocó su punto más alto en 2022, comenzó el declive real del volumen de negocio. El modelo analítico destapó que el "boom" de esta distribuidora venía impulsado por bloques de clientes de **Italia, Polonia, Portugal y el Reino Unido**. 
+
+En 2023, estos bloques de compradores internacionales **desaparecieron por completo del gráfico de AC Fermentum**. Dejaron de comprarles de golpe. Estamos ante un escenario de **Churn real**: clientes finales que se fugaron de nuestra red comercial.
+
+
+<img src="https://github.com/Elian-digital/PowerBI_Sales-Diagnosis-Churn-Analysis/blob/main/images/08_Paises_Ac_fermentum.png?raw=true" width="500">
+
+
+---
+
+## 🛠️ Arquitectura Técnica y Respaldo del Dato
+
+Para construir esta narrativa de negocio y asegurar que los insights fueran 100% confiables para la toma de decisiones, se desarrolló un backend robusto en Power BI que soporta la integridad de este reporte:
+
+* **ETL Avanzado (Power Query):** Extracción, limpieza, normalización y transformación de la estructura de ventas fragmentada de los comercios online europeos para corregir anomalías estructurales de origen.
+* **Modelado de Datos Avanzado:** Diseño e implementación de un modelo en estrella (*Star Schema*) óptimo para garantizar un alto rendimiento en el procesamiento de millones de registros y asegurar la escalabilidad del informe.
+* **Cálculos DAX Complejos:** Desarrollo de métricas e indicadores dinámicos para calcular con precisión las tasas de retención, la identificación temporal del Churn de clientes (*fuga activa*) y el ticket promedio real ponderado entre los años 2018 y 2024.
+
+---
+
+## 📋 Conclusiones y Próximos Pasos (Acción de Negocio)
+
+El dataset actual ha permitido diagnosticar con precisión el *dónde*, el *cuándo* y el *cuánto* del impacto financiero. Sin embargo, para resolver las causas operativas de por qué se marcharon estos bloques de clientes, se propone a la dirección abrir tres líneas de investigación:
+
+1. **H1 (Aparición de Competencia):** Auditar si nuevos proveedores en los mercados de Polonia, Italia o Portugal captaron a los compradores clave que antes dependían de nuestra red de distribución en Alemania.
+2. **H2 (Problemas Operativos Internos):** Cruzar este histórico con datos de operaciones para revisar si existieron retrasos críticos en logística, roturas de stock o cambios contractuales bruscos en el periodo 2022-2023.
+3. **H3 (Contexto Macroeconómico):** Evaluar el impacto de la inflación y las regulaciones aduaneras post-periodo en países clave que pudieran haber reducido la demanda de importación de merchandising.
+
+---
+
+## 📬 Contacto y Redes
+
+Si quieres conocer el detalle técnico del modelo DAX, auditar el proceso de ETL o discutir cómo la visualización de datos puede resolver problemas complejos de negocio, no dudes en contactarme:
+
+* **LinkedIn:** [in/eliandaghoum](https://linkedin.com/in/eliandaghoum)
+* **Email:** [eliandaghoum@gmail.com](mailto:eliandaghoum@gmail.com)
+* **GitHub:** [@Elian-digital](https://github.com/Elian-digital)
